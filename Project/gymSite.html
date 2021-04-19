@@ -15,7 +15,7 @@
 
 <style>
   #map {
-    height: 500px;
+    height: 700px;
     width: 100%;
 }
 </style>
@@ -24,11 +24,21 @@
     <script>
     function initMap(){
       var location = {lat: 49.941, lng: -119.392};
-      var map = new google.maps.Map(document.getElementById("map"), {zoom: 4, center: location});
+      var location2 = {lat: 49.239, lng: -123.114};
+      var location3 = {lat: 51.027, lng: -114.166};
+      var maps = new google.maps.Map(document.getElementById("map"), {zoom: 4, center: location});
       var marker = new google.maps.Marker({
-    position: {location},
-    map: map
+      position: location,
+      map: maps
   });
+    var marker2 = new google.maps.Marker({
+    position: location2,
+    map: maps
+  });
+  var marker3 = new google.maps.Marker({
+  position: location3,
+  map: maps
+});
     }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXrUzaM2CU01pMp-qoFqXJBWcdLcPGwm8&callback=initMap"></script>
